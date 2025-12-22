@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "EBF.h"
-#include "EBF_PlugAndPlay.h"
-#include "EBF_PlugAndPlayManager.h"
+#include "PlugAndPlay.h"
+#include "PnP_PlugAndPlayManager.h"
 
 // EBF objects creation, should be global
 EBF_Core EBF;
@@ -29,7 +29,7 @@ void setup()
 	deviceInfo.endpointData[0].i2cAddress = 0x3E;
 	deviceInfo.numberOfInterrupts = 0;
 
-	rc = EBF_PlugAndPlayManager::WriteDeviceEEPROM(0x50 + EBF_PlugAndPlayManager::PNP_EEPROM_DEVICE, deviceInfo);
+	rc = PnP_PlugAndPlayManager::WriteDeviceEEPROM(0x50 + PnP_PlugAndPlayManager::PNP_EEPROM_DEVICE, deviceInfo);
 	if (rc == EBF_OK) {
 		led.Blink(100, 900);
 	} else {
