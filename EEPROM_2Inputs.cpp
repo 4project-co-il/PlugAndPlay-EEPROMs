@@ -23,7 +23,7 @@ void setup()
 
 	deviceInfo.headerId = 0x506E502A;	// "PnP*"
 	deviceInfo.version = 1;
-	deviceInfo.deviceIDs[0] = PNP_ID_2INPUT;
+	deviceInfo.deviceIDs[0] = PNP_ID_2INPUTS;
 	deviceInfo.numberOfEndpoints = 1;
 	deviceInfo.endpointData[0].endpointId = 1;
 	deviceInfo.endpointData[0].i2cAddress = 0;

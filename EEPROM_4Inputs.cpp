@@ -23,12 +23,13 @@ void setup()
 
 	deviceInfo.headerId = 0x506E502A;	// "PnP*"
 	deviceInfo.version = 1;
-	deviceInfo.deviceIDs[0] = PNP_ID_1INPUT;
+	deviceInfo.deviceIDs[0] = PNP_ID_4INPUTS;
 	deviceInfo.numberOfEndpoints = 1;
 	deviceInfo.endpointData[0].endpointId = 1;
-	deviceInfo.endpointData[0].i2cAddress = 0;
+	deviceInfo.endpointData[0].i2cAddress = 0x70;
 	deviceInfo.numberOfInterrupts = 1;
 	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_ON_CHANGE;
+	deviceInfo.interrupt1Endpoint = 0;
 
 	rc = PnP_PlugAndPlayManager::WriteDeviceEEPROM(0x50 + PnP_PlugAndPlayManager::PNP_EEPROM_DEVICE, deviceInfo);
 	if (rc == EBF_OK) {
