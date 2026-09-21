@@ -26,7 +26,7 @@ void setup()
 	deviceInfo.deviceIDs[0] = PNP_ID_STTS22H_TEMPERATURE_SENSOR;
 	deviceInfo.numberOfEndpoints = 1;
 	deviceInfo.endpointData[0].endpointId = 1;
-	deviceInfo.endpointData[0].i2cAddress = 0x3C;
+	deviceInfo.endpointData[0].i2cAddress = 0x3F;
 	deviceInfo.numberOfInterrupts = 1;
 	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_LOW;
 	deviceInfo.interrupt1Endpoint = 0;
