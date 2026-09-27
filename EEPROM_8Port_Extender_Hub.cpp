@@ -29,7 +29,7 @@ void setup()
 	deviceInfo.numberOfEndpoints = 2;
 
 	deviceInfo.numberOfInterrupts = 1;
-	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_LOW;
+	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_FALLING;
 	deviceInfo.interrupt1Endpoint = 1;
 
 	deviceInfo.endpointData[0].endpointId = 0;

@@ -28,7 +28,7 @@ void setup()
 	deviceInfo.endpointData[0].endpointId = 1;
 	deviceInfo.endpointData[0].i2cAddress = 0x70;
 	deviceInfo.numberOfInterrupts = 1;
-	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_LOW;
+	deviceInfo.interrupt1Mode = PnP_InterruptMode::PNP_INTERRUPT_FALLING;
 	deviceInfo.interrupt1Endpoint = 0;
 
 	rc = PnP_PlugAndPlayManager::WriteDeviceEEPROM(0x50 + PnP_PlugAndPlayManager::PNP_EEPROM_DEVICE, deviceInfo);
